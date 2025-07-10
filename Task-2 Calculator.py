@@ -18,4 +18,26 @@ while ch.lower() != "no":
 
         operation = input("Enter your choice (1,2, 3, 4 or +, -, *, /)")
 
-        #Perform the operatio
+        #Perform the operation 
+        if operation == '1' or operation == '+':
+            print(f"{a} + {b} = {a + b}")
+        elif operation == '2' or operation == '-':
+            print(f"{a} - {b} = {a - b}")
+        elif operation == '3' or operation == '*':
+            print(f"{a} * {b} = {a * b}")
+        elif operation == '4' or operation == '/':
+            if b != 0:
+                print(f"{a} / {b} = {a / b}")
+            else:
+                print("Error: Division by zero is not allowed.")
+        else:
+            print("Invalid choice. Please try again")
+            
+    except ValueError:
+        print("Invalid input. Please enter numeric values.")
+    
+    #Check if user wants to continue
+    ch = input("\nDo you want to continue? (yes/no): ")
+    print()
+
+print("Thank you for using the Calculator!")
